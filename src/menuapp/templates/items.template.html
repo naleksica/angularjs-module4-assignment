@@ -1,0 +1,14 @@
+<div class="container">
+  <a ui-sref="home">Home</a> &lt; <a ui-sref="categories">List</a>
+  <h1>Menu Items</h1>
+  <div ng-if="$ctrl.items.length === 0">
+    <p>No items available for this category.</p>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="item in itemsCtrl.items">
+      <h3>{{ item.name }}</h3>
+      <p>{{ item.description }}</p>
+      <p><strong>Price:</strong> ${{ item.price_large }}</p>
+    </li>
+  </ul>
+</div>

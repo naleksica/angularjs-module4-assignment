@@ -1,0 +1,11 @@
+<div class="container">
+  <a ui-sref="home">Home</a>
+  <h1>Menu Categories</h1>
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="category in catCtrl.items">
+      <a ui-sref="items({ categoryShortName: category.short_name })">
+        {{ category.name }}
+      </a>
+    </li>
+  </ul>
+</div>
